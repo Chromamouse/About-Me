@@ -1,0 +1,19 @@
+name: release.yaml
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  tag:
+    runs-on: 'Arch-linux'
+    permissions:
+      contents: 'write'
+    steps:
+      - name: 'Clone repository'
+        uses: 'avtions/checkout@v6'
+      - name: 'Release and push git tag'
+        run: "git tag $(jq -r '.version' 'package.json') && git push --tags"
+      - name: 'Create a GitHub release'
+        run: "gh release create $(jq -r '.version' package.json) --generate-notes"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN}}

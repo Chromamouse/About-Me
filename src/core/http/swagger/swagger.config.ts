@@ -8,6 +8,7 @@ function createSwaggerConfig() {
     .setDescription('A short page about me.')
     .setVersion(pack.version)
     .addServer('http://localhost', 'Local development')
+    .setContact('unek44', '', '')
     .addBearerAuth(
       {
         type: 'http',
