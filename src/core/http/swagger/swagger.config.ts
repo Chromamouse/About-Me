@@ -8,8 +8,6 @@ function createSwaggerConfig() {
     .setDescription('A short page about me.')
     .setVersion(pack.version)
     .addServer('http://localhost', 'Local development')
-    .setContact('Dawid Małek', 'https://barcz.me', 'github@barcz.me')
-    .setLicense('Unlicense', 'https://opensource.org/licenses/Unlicense')
     .addBearerAuth(
       {
         type: 'http',
