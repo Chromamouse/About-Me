@@ -1,0 +1,32 @@
+To run the Project you will need:
+
+Node.js 24.10
+TypeScript 5.8
+
+Nest.js 11.1(or higher)
+Prisma 6.7.0(or higher)
+
+First clone the repository:
+
+    git clone git@github.com:Chromamouse/About-Me.git
+
+Next, prepare environment variable file by copying .env.dist to .env:
+
+    cd About-Me
+    cp .env.dist .env
+
+Use docker to set up the environment:
+
+    docker compose up -d --build
+
+And the project should be running. You can check the logs by entering:
+
+    docker compose logs -f app
+
+You can also run test by running:
+
+    npm run test:functional
+
+or
+
+npm run test
