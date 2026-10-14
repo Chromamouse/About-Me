@@ -4,7 +4,7 @@ import expect from 'expect';
 import { execSync } from 'child_process';
 import { deepCompare } from '../_helper/deep-compare';
 
-const apiBaseUrl = 'http://localhost';
+const apiBaseUrl = 'http://localhost:3000';
 let apiToken: string | null = null;
 let apiResponse: AxiosResponse;
 
